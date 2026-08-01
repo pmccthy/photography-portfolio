@@ -1,0 +1,18 @@
+# Indonesia postcards captions
+# Format: filename | caption text
+# Leave the right-hand side blank for no caption.
+
+01_woman_field.mov | Woman having lunch, Bali
+02_surf_at_sunset.mov | Surfers at sunset, Bali
+03_kite.mov | Kite flyer, Bali
+04_bromo.mov | A man with his horse at Mount Bromo, East Java
+05_sailing.mov | A yacht near the Komodo Islands
+06_football.mov | A football game, Gili Trawangan
+07_beach_ball.mov | Volleyball at sunset on Canggu Beach, Bali
+08_bromo_food.mov | A warung at Mount Bromo, East Java
+09_eating_by_bromo.mov | Men eating breakfast at Mount Bromo, Eat Java
+10_down_the_lane.mov | A motorbike down the road at Medewi, Bali
+11_sunrise_clouds.mov | Clouds at sunrise overlooking Mount Ijen, East Java
+12_volcano.mov | Volcano, East Java
+13_horse_beach.mov | A horse at sunset in Gili Trawangan
+14_hans1.mov | Me and my friend Hans on an island in Komodo National Park

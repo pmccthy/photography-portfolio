@@ -1,0 +1,47 @@
+# Echoes captions
+# Format: filename | caption text
+# Leave the right-hand side blank for no caption. The order here matches the slideshow.
+001.JPG | Varanasi, India
+002.JPG | Koh Tao, Thailand
+003.JPG | Hoi An, Vietnam
+004.JPG | Varanasi, India
+005.JPG | Singapore
+005_01.JPG | Bangkok, Thailand
+006.JPG | Hong Kong
+007.JPG | Singapore
+008.JPG | Ha Giang, Vietnam
+009.JPG | Ho Chi Minh City, Vietnam
+012.JPG | Singapore
+013.JPG | Ho Chi Minh City, Vietnam
+015.JPG | Gili Trawangan, Indonesia
+016.JPG | Gili Trawangan, Indonesia
+017.JPG | Varanasi, India
+019.JPG | Surat Thani, Thailand
+020.JPG | Kyoto, Japan
+021.JPG | Surat Thani, Thailand
+022.JPG | Ha Giang, Vietnam
+023.JPG | Varanasi, India
+024.JPG | Hong Kong
+025.JPG | Chiang Mai, Thailand
+026.JPG | Sa Pa, Vietnam
+027.JPG | Sa Pa, Vietnam
+029.JPG | Sa Pa, Vietnam
+030.JPG | Singapore
+031.JPG | Hoi An, Vietnam
+032.JPG | Hong Kong
+033.JPG | Kawaguchiko, Japan
+034.JPG | Singapore
+035.JPG | Tokyo, Japan
+036.JPG | Kawaguchiko, Japan
+037.JPG | Varanasi, India
+038.JPG | Thailand
+039.JPG | Varanasi
+041.JPG | Surat Thani
+042.JPG | Singapore
+043.JPG | Ferry to Koh Tao, Thailand
+044.JPG | Ho Chi Minh City, Vietnam
+045.JPG | Bangkok, Thailand
+046.JPG | Singapore
+047.JPG | Varanasi, India
+048.JPG | Kawaguchiko, Japan
+DSCF6411.JPG | Hoi An, Vietnam

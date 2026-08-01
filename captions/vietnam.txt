@@ -1,0 +1,16 @@
+# Vietnam postcards captions
+# Format: filename | caption text
+# Leave the right-hand side blank for no caption.
+
+01_ha_long_bay.MOV | A view in Ha Long Bay
+02_ha_long_bay2.mov | A beach in Ha Long Bay
+03_hlb_boat_pull_out.mov | A boat pulling out in Ha Long Bay
+04_volleyball.mov | Volleyball in 
+05_ha_giang_corner.mov | A corner on the Ha Giang Loop
+06_waterfall_jump.mov | A waterfall on the Ha Giang Loop
+07_sapa_hotel.mov | A hotel in Sa Pa
+08_people_in_field.mov | People having lunch in a field in Sa Pa
+09_sapa_huts.mov | A woman in Sa Pa
+10_hanoi_fishing.mov | A fisherman in Hanoi
+11_hanoi_bridge.mov | Thê Húc Bridge in Hanoi
+12_koi_fish.mov | Fish in Hanoi

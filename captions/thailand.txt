@@ -1,0 +1,12 @@
+# Thailand postcards captions
+# Format: filename | caption text
+# Leave the right-hand side blank for no caption.
+
+01_seven_eleven_grade2.mov | A 7/11 in Surat Thani
+02_boats_and_snorkeling.mov | Snorklers at Shark Bay, Koh Tao
+03_legs.mov | Aboard a dive boat in Koh Tao
+04_veg_and_sea.mov | The ferry on the way to Koh Tao
+05_rock2.mov | Rock at Tanote Bay, Koh Tao
+06_boat_sunset.mov | Sunset at Sairee Beach, Koh Tao
+07_workers_in_rain.mov | Field workers in the rain in Pai
+08_elephant.mov | An elephant in Chiang Mai
