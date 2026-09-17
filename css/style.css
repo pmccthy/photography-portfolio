@@ -5,7 +5,7 @@ html, body {
   height: 100%;
   background: #fdfdfb;
   color: #000;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Averia Serif Libre", "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
@@ -49,10 +49,11 @@ img, video { max-width: 100%; height: auto; display: block; }
 }
 
 .brand {
-  font-size: 22px;
+  font-size: 32px;
   letter-spacing: .01em;
   margin-bottom: 36px;
   font-weight: 400;
+  font-style: italic;
 }
 .brand a { border: none; }
 
