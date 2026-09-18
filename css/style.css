@@ -333,36 +333,42 @@ body.lightbox-open { overflow: hidden; }
     height: auto;
     border-right: none;
     border-bottom: 1px solid #eee;
-    padding: 16px 24px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    padding: 12px 24px 8px;
+    display: block;
   }
-  .brand { margin-bottom: 0; display: block; }
+  .brand {
+    margin-bottom: 0;
+    font-size: 28px;
+    position: relative;
+    display: block;
+  }
   .menu-toggle {
     display: inline-block;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 16px;
     border: none;
     background: none;
     color: #1a1a1a;
     padding: 0;
-    margin-left: 20px;
-    flex-shrink: 0;
+    position: absolute;
+    top: 12px;
+    right: 24px;
   }
   .nav-wrap {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 0;
     right: 0;
     background: #fdfdfb;
-    padding: 20px 24px;
+    padding: 12px 24px;
     border-bottom: 1px solid #eee;
     z-index: 100;
   }
   .nav-wrap.open { display: block; }
-  .main { padding: 20px 24px 60px; }
+  .main { padding: 12px 24px 60px; }
+  .page-title { margin: 0 0 4px; }
+  .intro { margin: 0 auto 12px; }
   .slideshow { margin: 0 auto; }
   .grid { grid-template-columns: 1fr; gap: 28px; }
   .slide-stage { align-items: flex-start; min-height: auto; }
