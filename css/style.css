@@ -39,7 +39,7 @@ img, video { max-width: 100%; height: auto; display: block; }
 /* ---------- Sidebar ---------- */
 .sidebar {
   padding: 40px 28px;
-  border-right: 1px solid #eee;
+  margin-left: 20px;
   background: #fdfdfb;
   position: sticky;
   top: 0;
@@ -334,11 +334,13 @@ body.lightbox-open { overflow: hidden; }
     border-right: none;
     border-bottom: 1px solid #eee;
     padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .brand { margin-bottom: 0; display: inline-block; }
+  .brand { margin-bottom: 0; display: block; }
   .menu-toggle {
     display: inline-block;
-    float: right;
     cursor: pointer;
     font-size: 13px;
     letter-spacing: .1em;
@@ -351,5 +353,6 @@ body.lightbox-open { overflow: hidden; }
   .nav-wrap { display: none; margin-top: 24px; }
   .nav-wrap.open { display: block; }
   .main { padding: 30px 24px 60px; }
+  .grid { grid-template-columns: 1fr; gap: 28px; }
   .slide img, .slide video { max-height: 60vh; }
 }
