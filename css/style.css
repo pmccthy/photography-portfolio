@@ -366,9 +366,9 @@ body.lightbox-open { overflow: hidden; }
     z-index: 100;
   }
   .nav-wrap.open { display: block; }
-  .main { padding: 12px 24px 60px; }
-  .page-title { margin: 0 0 4px; }
-  .intro { margin: 0 auto 12px; }
+  .main { padding: 0 24px 60px; }
+  .page-title { margin: 0 0 2px; }
+  .intro { margin: 0 auto 8px; }
   .slideshow { margin: 0 auto; }
   .grid { grid-template-columns: 1fr; gap: 28px; }
   .slide-stage { align-items: flex-start; min-height: auto; }

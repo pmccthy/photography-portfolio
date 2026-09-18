@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (toggle && navWrap) {
     toggle.addEventListener('click', () => {
       navWrap.classList.toggle('open');
-      toggle.textContent = navWrap.classList.contains('open') ? 'Close' : 'Menu';
+      toggle.textContent = navWrap.classList.contains('open') ? '▲' : '▼';
     });
   }
 
