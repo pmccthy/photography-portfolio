@@ -333,7 +333,7 @@ body.lightbox-open { overflow: hidden; }
     height: auto;
     border-right: none;
     border-bottom: 1px solid #eee;
-    padding: 12px 24px 8px;
+    padding: 12px 24px 0;
     display: block;
   }
   .brand {
@@ -367,7 +367,7 @@ body.lightbox-open { overflow: hidden; }
   }
   .nav-wrap.open { display: block; }
   .main { padding: 0 24px 60px; }
-  .page-title { margin: 0 0 2px; }
+  .page-title { margin: 0; }
   .intro { margin: 0 auto 8px; }
   .slideshow { margin: 0 auto; }
   .grid { grid-template-columns: 1fr; gap: 28px; }
