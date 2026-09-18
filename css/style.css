@@ -333,7 +333,7 @@ body.lightbox-open { overflow: hidden; }
     height: auto;
     border-right: none;
     border-bottom: 1px solid #eee;
-    padding: 20px 24px;
+    padding: 16px 24px 12px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -342,14 +342,13 @@ body.lightbox-open { overflow: hidden; }
   .menu-toggle {
     display: inline-block;
     cursor: pointer;
-    font-size: 13px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+    font-size: 24px;
     border: none;
     background: none;
     color: #1a1a1a;
     padding: 0;
-    margin-top: -4px;
+    margin-left: 20px;
+    flex-shrink: 0;
   }
   .nav-wrap {
     display: none;
