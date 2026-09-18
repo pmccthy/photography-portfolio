@@ -336,7 +336,7 @@ body.lightbox-open { overflow: hidden; }
     padding: 20px 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   .brand { margin-bottom: 0; display: block; }
   .menu-toggle {
@@ -349,10 +349,23 @@ body.lightbox-open { overflow: hidden; }
     background: none;
     color: #1a1a1a;
     padding: 0;
+    margin-top: -4px;
   }
-  .nav-wrap { display: none; margin-top: 24px; }
+  .nav-wrap {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fdfdfb;
+    padding: 20px 24px;
+    border-bottom: 1px solid #eee;
+    z-index: 100;
+  }
   .nav-wrap.open { display: block; }
-  .main { padding: 30px 24px 60px; }
+  .main { padding: 20px 24px 60px; }
+  .slideshow { margin: 0 auto; }
   .grid { grid-template-columns: 1fr; gap: 28px; }
+  .slide-stage { align-items: flex-start; min-height: auto; }
   .slide img, .slide video { max-height: 60vh; }
 }
