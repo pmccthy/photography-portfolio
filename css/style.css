@@ -368,7 +368,6 @@ body.lightbox-open { overflow: hidden; }
   }
   .nav-wrap.open { display: block; }
   .main { padding: 0 24px 60px; }
-  .main { margin-top: -52px; }
   .page-title { margin: 0; }
   .intro { margin: 0 auto 8px; }
   .slideshow { margin: 0 auto; }
@@ -376,7 +375,6 @@ body.lightbox-open { overflow: hidden; }
   .slide-stage { align-items: flex-start; min-height: auto; }
   .slide img, .slide video { max-height: 60vh; }
   .hero { margin: 0 auto; }
-  .prose { margin: 0 auto; }
-  .contact-block { margin: 0 auto; }
+  .prose { margin: 0 auto; marg.contact-block { margin: 0 auto; margin-top: -48px; }{ margin: 0 auto; }
   .contact-lead { margin: 0 auto 20px; }
 }
