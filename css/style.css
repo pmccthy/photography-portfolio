@@ -373,4 +373,8 @@ body.lightbox-open { overflow: hidden; }
   .grid { grid-template-columns: 1fr; gap: 28px; }
   .slide-stage { align-items: flex-start; min-height: auto; }
   .slide img, .slide video { max-height: 60vh; }
+  .hero { margin: 0 auto; }
+  .prose { margin: 0 auto; }
+  .contact-block { margin: 0 auto; }
+  .contact-lead { margin: 0 auto 20px; }
 }
