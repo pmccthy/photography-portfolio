@@ -54,6 +54,10 @@ img, video { max-width: 100%; height: auto; display: block; }
   margin-bottom: 36px;
   font-weight: 400;
   font-style: italic;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .brand a { border: none; }
 
@@ -331,11 +335,11 @@ body.lightbox-open { overflow: hidden; }
   .sidebar {
     position: static;
     height: auto;
-    overflow: visible;
     border-right: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: none;
     padding: 12px 24px 0;
     display: block;
+    overflow: hidden;
   }
   .brand {
     margin-bottom: 0;
@@ -358,23 +362,22 @@ body.lightbox-open { overflow: hidden; }
   .nav-wrap {
     display: none;
     position: fixed;
-    top: 50px;
+    top: 0;
     left: 0;
     right: 0;
+    bottom: auto;
     background: #fdfdfb;
-    padding: 12px 24px;
+    padding: 56px 24px 12px;
     border-bottom: 1px solid #eee;
     z-index: 100;
   }
   .nav-wrap.open { display: block; }
   .main { padding: 0 24px 60px; }
-  .page-title { margin: 0; }
-  .intro { margin: 0 auto 8px; }
+  .page-title { margin: 12px 0 0; }
+  .intro { margin: 0 auto 12px; }
   .slideshow { margin: 0 auto; }
   .grid { grid-template-columns: 1fr; gap: 28px; }
   .slide-stage { align-items: flex-start; min-height: auto; }
   .slide img, .slide video { max-height: 60vh; }
-  .hero { margin: 0 auto; }
-  .prose { margin: 0 auto; marg.contact-block { margin: 0 auto; }{ margin: 0 auto; }
-  .contact-lead { margin: 0 auto 20px; }
+  .prose { margin: 0 auto; }
 }
