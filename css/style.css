@@ -357,9 +357,12 @@ body.lightbox-open { overflow: hidden; }
     background: none;
     color: #1a1a1a;
     padding: 0;
-    position: absolute;
+    /* fixed + z-index above .nav-wrap (100) so the arrow stays visible
+       and tappable while the menu overlay is open */
+    position: fixed;
     top: 12px;
     right: 24px;
+    z-index: 200;
     line-height: 1;
     min-width: 24px;
     text-align: center;
@@ -377,7 +380,10 @@ body.lightbox-open { overflow: hidden; }
     z-index: 100;
   }
   .nav-wrap.open { display: block; }
-  .main { padding: 0 24px 60px; }
+  .main {
+    padding: 0 24px 60px;
+    align-items: stretch;
+  }
   .page-title { 
     margin: 12px 0 0;
     text-align: left;
