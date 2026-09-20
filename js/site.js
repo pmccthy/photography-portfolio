@@ -1,27 +1,70 @@
-// Menu toggle functionality
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-  const navWrap = document.querySelector('.nav-wrap');
-  navWrap.classList.toggle('open');
-  this.textContent = navWrap.classList.contains('open') ? '▲' : '▼';
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+  initializeMenu();
+  initializeSubmenus();
+  initializeSlideshow();
 });
 
-// Projects submenu toggle
-document.querySelectorAll('.toggle').forEach(toggle => {
+// Also initialize immediately in case DOM is already loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeMenu();
+    initializeSubmenus();
+    initializeSlideshow();
+  });
+} else {
+  initializeMenu();
+  initializeSubmenus();
+  initializeSlideshow();
+}
+
+function initializeMenu() {
+  const toggle = document.querySelector('.menu-toggle');
+  const navWrap = document.querySelector('.nav-wrap');
+  
+  if (!toggle || !navWrap) return;
+  
+  // Set initial state
+  toggle.textContent = '▼';
+  
   toggle.addEventListener('click', function(e) {
     e.preventDefault();
-    this.closest('.has-children').classList.toggle('open');
+    e.stopPropagation();
+    navWrap.classList.toggle('open');
+    this.textContent = navWrap.classList.contains('open') ? '▲' : '▼';
   });
-});
+  
+  // Close menu when clicking outside or on a link
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.sidebar') && navWrap.classList.contains('open')) {
+      navWrap.classList.remove('open');
+      toggle.textContent = '▼';
+    }
+  });
+}
+
+function initializeSubmenus() {
+  document.querySelectorAll('.toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.closest('.has-children').classList.toggle('open');
+    });
+  });
+}
 
 // Slideshow navigation
-const slides = document.querySelectorAll('.slide');
-const slideZones = document.querySelectorAll('.slide-zone');
-let currentSlide = 0;
+function initializeSlideshow() {
+  const slides = document.querySelectorAll('.slide');
+  const slideZones = document.querySelectorAll('.slide-zone');
+  let currentSlide = 0;
 
-if (slides.length > 0) {
+  if (slides.length === 0) return;
+
   // Handle left/right zone clicks
   slideZones.forEach(zone => {
     zone.addEventListener('click', function(e) {
+      e.stopPropagation();
       if (this.classList.contains('prev')) {
         navigateSlide(-1);
       } else if (this.classList.contains('next')) {
