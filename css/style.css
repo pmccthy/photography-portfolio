@@ -288,6 +288,9 @@ body.lightbox-open { overflow: hidden; }
   color: #000;
 }
 .tile a, .tile:hover { border: none; }
+/* Tile labels read "Postcards from X" only on mobile, where the page
+   title is hidden and the tile has to carry the context itself. */
+.label-prefix { display: none; }
 
 /* ---------- About / Contact ---------- */
 .prose {
@@ -327,6 +330,12 @@ body.lightbox-open { overflow: hidden; }
   font-style: italic;
   font-size: 13px;
   color: #777;
+}
+
+/* ---------- Desktop: title sits lower and closer to the media ---------- */
+@media (min-width: 801px) {
+  .media-page .page-title { margin: 32px 0 22px; }
+  .media-page .slideshow { margin-top: 12px; }
 }
 
 /* ---------- Mobile ---------- */
@@ -388,6 +397,12 @@ body.lightbox-open { overflow: hidden; }
     margin: 12px 0 0;
     text-align: left;
   }
+  /* Echoes, Postcards and the country pages drop their title on mobile --
+     the tile you tapped already names where you are. */
+  .page-title.hide-on-mobile { display: none; }
+  .page-title.hide-on-mobile + .slideshow,
+  .page-title.hide-on-mobile + .intro { margin-top: 14px; }
+  .label-prefix { display: inline; }
   .intro { 
     margin: 0 auto 12px;
     text-align: left;
