@@ -1,48 +1,46 @@
-// Wait for DOM to be ready
-document.addEventListener('DOMContentLoaded', function() {
-  initializeMenu();
-  initializeSubmenus();
-  initializeSlideshow();
-});
-
-// Also initialize immediately in case DOM is already loaded
+// Initialize when DOM is ready or immediately if already loaded
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', function() {
-    initializeMenu();
-    initializeSubmenus();
-    initializeSlideshow();
-  });
+  document.addEventListener('DOMContentLoaded', initializeAll);
 } else {
+  initializeAll();
+}
+
+function initializeAll() {
   initializeMenu();
   initializeSubmenus();
   initializeSlideshow();
 }
 
+// Mobile menu button toggle
 function initializeMenu() {
   const toggle = document.querySelector('.menu-toggle');
   const navWrap = document.querySelector('.nav-wrap');
   
   if (!toggle || !navWrap) return;
   
-  // Set initial state
   toggle.textContent = '▼';
   
   toggle.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
+    const isOpen = navWrap.classList.contains('open');
     navWrap.classList.toggle('open');
-    this.textContent = navWrap.classList.contains('open') ? '▲' : '▼';
+    toggle.textContent = isOpen ? '▼' : '▲';
   });
 }
 
+// Projects submenu toggle (works on both desktop and mobile)
 function initializeSubmenus() {
-  document.querySelectorAll('.toggle').forEach(toggle => {
+  const toggles = document.querySelectorAll('a.toggle');
+  
+  toggles.forEach(toggle => {
     toggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
-      const hasChildren = this.closest('.has-children');
-      if (hasChildren) {
-        hasChildren.classList.toggle('open');
+      
+      const listItem = this.closest('li.has-children');
+      if (listItem) {
+        listItem.classList.toggle('open');
       }
     });
   });
@@ -68,7 +66,7 @@ function initializeSlideshow() {
     });
   });
 
-  // Handle keyboard navigation
+  // Keyboard navigation
   document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowLeft') navigateSlide(-1);
     if (e.key === 'ArrowRight') navigateSlide(1);
@@ -79,17 +77,9 @@ function initializeSlideshow() {
     slides[currentSlide].classList.remove('active');
     currentSlide = (currentSlide + direction + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
-    
-    // Update slide counter if it exists
-    const counter = document.querySelector('.slide-counter');
-    if (counter) {
-      const activeSlide = slides[currentSlide];
-      const num = activeSlide.getAttribute('data-num');
-      if (num) counter.textContent = num;
-    }
   }
 
-  // Image zoom functionality
+  // Image zoom
   const slideImages = document.querySelectorAll('.slide img');
   const lightbox = document.querySelector('.lightbox');
   
