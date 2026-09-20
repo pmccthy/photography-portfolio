@@ -2,7 +2,8 @@
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initializeAll);
 } else {
-  initializeAll();
+  // DOM already loaded, initialize immediately
+  setTimeout(initializeAll, 0);
 }
 
 function initializeAll() {
@@ -16,16 +17,30 @@ function initializeMenu() {
   const toggle = document.querySelector('.menu-toggle');
   const navWrap = document.querySelector('.nav-wrap');
   
-  if (!toggle || !navWrap) return;
+  if (!toggle || !navWrap) {
+    console.warn('Menu elements not found');
+    return;
+  }
   
+  // Set initial state: menu is closed, button shows down arrow
   toggle.textContent = '▼';
+  navWrap.classList.remove('open');
   
   toggle.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
+    
     const isOpen = navWrap.classList.contains('open');
-    navWrap.classList.toggle('open');
-    toggle.textContent = isOpen ? '▼' : '▲';
+    
+    if (isOpen) {
+      // Menu is open, close it and show down arrow
+      navWrap.classList.remove('open');
+      toggle.textContent = '▼';
+    } else {
+      // Menu is closed, open it and show up arrow
+      navWrap.classList.add('open');
+      toggle.textContent = '▲';
+    }
   });
 }
 
