@@ -10,7 +10,7 @@
 06_football.mov | Gili Trawangan
 07_beach_ball.mov | Canggu Beach, Bali
 08_bromo_food.mov | Mount Bromo, East Java
-09_eating_by_bromo.mov | Mount Bromo, Eat Java
+09_eating_by_bromo.mov | Mount Bromo, East Java
 10_down_the_lane.mov | Medewi, Bali
 11_sunrise_clouds.mov | Mount Ijen, East Java
 12_volcano.mov | East Java
