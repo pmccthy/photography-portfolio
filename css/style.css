@@ -355,7 +355,12 @@ body.lightbox-open { overflow: hidden; }
   .brand {
     margin-bottom: 0;
     font-size: 28px;
+    /* same stacking fix as .menu-toggle: .nav-wrap.open is fixed with an
+       opaque background at z-index 100 and reserves 56px of top padding for
+       the brand -- without a z-index the brand is painted over and vanishes
+       into that gap when the menu opens. */
     position: relative;
+    z-index: 200;
     display: block;
   }
   .menu-toggle {
