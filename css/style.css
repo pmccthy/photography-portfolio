@@ -348,6 +348,9 @@ body.lightbox-open { overflow: hidden; }
     height: auto;
     border-right: none;
     border-bottom: none;
+    /* the desktop sidebar's 20px left margin pushed the brand to 44px while
+       the nav and every page used the 24px gutter -- reset it here */
+    margin-left: 0;
     padding: 12px 24px 0;
     display: block;
     overflow: hidden;
@@ -371,11 +374,13 @@ body.lightbox-open { overflow: hidden; }
     background: none;
     color: #1a1a1a;
     padding: 0;
-    /* fixed + z-index above .nav-wrap (100) so the arrow stays visible
-       and tappable while the menu overlay is open */
-    position: fixed;
-    top: 12px;
-    right: 24px;
+    /* absolute inside .brand, which carries z-index 200, so the arrow paints
+       above the open menu overlay along with the name. top:50% + translate
+       keeps it centred on the brand no matter what the type size is. */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
     z-index: 200;
     line-height: 1;
     min-width: 24px;
