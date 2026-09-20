@@ -202,6 +202,7 @@ img, video { max-width: 100%; height: auto; display: block; }
   width: 18%;
   z-index: 5;
   background: transparent;
+  display: none;
 }
 .slide-zone.prev {
   left: 0;
@@ -395,12 +396,17 @@ body.lightbox-open { overflow: hidden; }
     margin: 0 auto;
   }
   
-  /* Mobile slideshow navigation arrows - larger and more visible */
+  /* Mobile slideshow navigation arrows - positioned on sides */
   .slide-zone {
-    width: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .slide-zone.prev {
+    left: 0;
+  }
+  .slide-zone.next {
+    right: 0;
   }
   .slide-zone.prev::before {
     content: '◀';

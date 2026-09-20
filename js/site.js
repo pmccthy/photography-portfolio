@@ -33,14 +33,6 @@ function initializeMenu() {
     navWrap.classList.toggle('open');
     this.textContent = navWrap.classList.contains('open') ? '▲' : '▼';
   });
-  
-  // Close menu when clicking outside or on a link
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.sidebar') && navWrap.classList.contains('open')) {
-      navWrap.classList.remove('open');
-      toggle.textContent = '▼';
-    }
-  });
 }
 
 function initializeSubmenus() {
@@ -48,7 +40,10 @@ function initializeSubmenus() {
     toggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
-      this.closest('.has-children').classList.toggle('open');
+      const hasChildren = this.closest('.has-children');
+      if (hasChildren) {
+        hasChildren.classList.toggle('open');
+      }
     });
   });
 }
